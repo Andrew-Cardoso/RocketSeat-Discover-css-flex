@@ -1,0 +1,20 @@
+.challenge-02 {
+	height: clamp(10rem, 50vh, 50vh);
+	display: flex;
+	gap: 1rem;
+}
+
+.challenge-02 > * {
+	flex-basis: 50%;
+	background: #CCC;
+	border-radius: 0.25rem;
+	filter: drop-shadow(0 0 0.1rem #fff5);
+}
+
+.challenge-02 > aside {
+	flex-basis: 25%;
+}
+
+.challenge-02 > article {
+	flex: 1;
+}

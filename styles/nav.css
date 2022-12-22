@@ -1,0 +1,38 @@
+main.nav {
+	display: grid;
+	width: 100vw;
+	height: 100vh;
+	place-content: center;
+	place-items: center;
+}
+
+.nav nav {
+	background-color: var(--container-bg);
+	padding: 3.5rem;
+	border-radius: 0.5rem;
+}
+
+.nav ul {
+	display: flex;
+	flex-flow: column;
+	justify-content: space-around;
+	align-items: center;
+	list-style: none;
+	gap: 1rem;
+}
+
+.nav li {
+	color: var(--main-color);
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+.nav li:hover {
+	background-color: #2b2b2b;
+	border-radius: 0.5rem;
+}
+
+.nav a {
+	padding: 1rem 3rem;
+  display: grid;
+}

@@ -1,0 +1,85 @@
+:root {
+	--main-color: antiquewhite;
+	--container-bg: #1b1b1b;
+	--action-color: burlywood;
+
+	font-size: 18px;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	background-color: #315;
+}
+
+body,
+main {
+	width: 100vw;
+	height: 100vh;
+	color: var(--main-color);
+	letter-spacing: .025rem;
+	word-spacing: .025rem;
+	line-height: 1.5rem;
+	overflow-x: hidden;
+}
+
+main {
+	padding: 1rem;
+}
+
+button {
+	background-color: #0000;
+	display: grid;
+	place-items: center;
+	border: none;
+	border-radius: 0.5rem;
+	cursor: pointer;
+}
+
+.code {
+	font-family: monospace;
+	font-size: 1rem;
+	color: crimson;
+	margin: auto .25rem;
+}
+
+#back-button {
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+	width: 4rem;
+	height: 3rem;
+	color: var(--action-color);
+	filter: drop-shadow(0 0 1rem #000) drop-shadow(0 0 1rem #000);
+	scale: 0;
+	transition: scale .5s ease-in-out;
+	animation: alternate 2s infinite ease-in-out rotate;
+	
+}
+
+#back-button.show {	
+	scale: 1;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(-36deg);
+	}
+	100% {
+		transform: rotate(36deg);
+	}
+}
+
+@keyframes show {
+	0% {
+		scale: 0;
+	}
+	100% {
+		scale: 1;
+	}
+}

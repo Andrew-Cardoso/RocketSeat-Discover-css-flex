@@ -1,0 +1,44 @@
+.challenge-01 {
+	display: flex;
+	justify-content: space-between;
+	background-color: #fff;
+	padding: 1.25rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 0 0.75rem #000, 0 0 0.75rem #000;
+	align-items: center;
+}
+
+.challenge-01 ul {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	list-style: none;
+	gap: 0.8rem;
+	font-size: 1rem;
+}
+
+.challenge-01 a {
+	text-decoration: none;
+	letter-spacing: normal;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.challenge li:not(:last-child) a {
+	color: #000;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.challenge-01 li:not(:last-child):hover {
+	transition: transform 0.25s ease;
+	transform: scaleY(1.35) scaleX(1.1);
+}
+
+.challenge-01 li:last-child a {
+	color: #fff;
+	background-color: indigo;
+	padding: .8rem 1rem;
+	border-radius: 0.35rem;
+  text-transform: capitalize;
+  font-size: .9rem;
+}

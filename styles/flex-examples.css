@@ -1,0 +1,166 @@
+main.flex-example {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	gap: 1rem;
+	padding: 1rem;
+}
+
+.flex-example section {
+	background-color: var(--container-bg);
+	display: flex;
+	padding: 0.5rem;
+}
+
+.flex-example section > div:nth-child(1) {
+	background-color: #2b2b2b;
+}
+
+.flex-example section > div:nth-child(2) {
+	background-color: #3b3b3b;
+}
+
+.flex-example section > div:nth-child(3) {
+	background-color: #4b4b4b;
+}
+
+.flex-example section > div:nth-child(4) {
+	background-color: #5b5b5b;
+}
+
+.flex-example section > div:nth-child(5) {
+	background-color: #6b6b6b;
+}
+
+.flex-example div {
+	color: var(--main-color);
+	text-transform: capitalize;
+	font-family: sans-serif;
+	padding: 1rem;
+}
+
+.flex-example .flex-0 {
+	justify-content: center;
+	align-items: center;
+	column-gap: 1rem;
+}
+
+.flex-example .flex-1 {
+	justify-content: space-around;
+	align-items: flex-end;
+}
+
+.flex-example .flex-2 {
+	justify-content: space-between;
+}
+
+.flex-example .flex-2 > div:nth-child(4) {
+	order: -1;
+	/* ! This will move the element to the first position 
+	! The default order value is 0, so -1 would the the first (if there is no -2) and 1 would be the last (if there is no 2)
+  ! */
+}
+
+.flex-example .flex-3 {
+	justify-content: space-evenly;
+}
+
+.flex-example .flex-4 {
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+.flex-example .flex-5 {
+	flex-direction: row-reverse;
+}
+
+.flex-example .flex-5 > div {
+	flex: 1;
+}
+
+.flex-example .flex-6 {
+	flex-wrap: wrap;
+	/* ! The elements can be splited into multiple rows (or columns depending on the direction)
+	! Since the children have 33% of the width, they will be at least 3 per row
+	! If the last row has less than 3 elements, it will fill container width
+	! */
+}
+
+.flex-example .flex-6 > div {
+	flex: 1 33.3333333%;
+
+	/* ! If there is 200px, it will keep one item per row, if 400px, two items and so */
+	/* min-width: 200px; */
+}
+
+.flex-example .flex-7 {
+	flex-flow: column wrap;
+	/* ! This is a shorthand for
+	*		flex-direction: column;
+	*		flex-wrap: wrap;
+	* */
+}
+
+.flex-example .flex-7 > div {
+	flex: 1 50%;
+}
+
+.flex-example .flex-8 {
+	flex-wrap: wrap;
+}
+
+.flex-example .flex-8 > div {
+	/* ! This overrides width or height depending on property flex-direction */
+	flex-basis: 50%;
+}
+
+.flex-example .flex-9 > div:nth-child(1) {
+	flex-grow: 1;
+	/* ! It will grow the element until it fills the container
+	!  The other siblings if unset will auto adjust to their content size	
+	! */
+}
+
+.flex-example .flex-9 > div:nth-child(3) {
+	flex-grow: 3;
+	/* ! It will be 3x the size of the first child which has only flex grow = 1 */
+}
+
+.flex-example .flex-10 > div {
+	flex-basis: 55%;
+}
+.flex-example .flex-10 > div:nth-child(1) {
+	flex-shrink: 1;
+	/* ! If set with flex-basis, it will shrink the element so it can fit the container
+	!  1 is the default value, every element will shrink equally inside the container
+	! */
+}
+
+.flex-example .flex-10 > div:nth-child(3) {
+	flex-shrink: 2;
+	/* ! If the property is more than 1, it will give up the space in the container, instead of filling, it will fit
+	! The more the value, the more it will give up the space. The minimum size of the element is the content within it
+	! */
+}
+
+.flex-example .flex-10 > div:nth-child(5) {
+	flex-shrink: 4;
+	/* ! No difference from the third child, as the content of the element would be clipped*/
+}
+
+
+.flex-example .flex-11 {
+	flex-wrap: wrap;
+}
+
+.flex-example .flex-11 > div {
+	flex: 1 1 50%;
+	/* ! This is a shorthand for flex-grow, flex-shrink and flex-basis
+	*  It is the same as
+	* flex-grow: 1;
+	* flex-shrink: 1;
+	* flex-basis: 50%;
+	! */
+
+}

@@ -1,0 +1,31 @@
+main.challenge {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.challenge > .description {
+	flex: 1;
+}
+
+.challenge .description h2 {
+	margin: 1rem 0;
+}
+
+.challenge .description p::before {
+	content: "\2713";
+	color: #4caf50;
+	margin-right: 0.25rem;
+}
+
+.challenge.column {
+	flex-direction: row;
+}
+
+.challenge.column > .description {
+	flex-basis: 33%;
+}
+
+.challenge.column > .result {
+	flex-basis: 100%;
+}

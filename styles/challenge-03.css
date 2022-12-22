@@ -1,0 +1,16 @@
+.challenge-03 {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .8rem;
+	justify-content: center;
+}
+
+.challenge-03 figure {
+	flex-basis: calc(100% / 3 - 1.6rem);
+	min-width: 250px;
+}
+
+.challenge-03 img {
+	width: 100%;
+	height: auto;
+}
